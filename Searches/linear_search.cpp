@@ -8,10 +8,10 @@ int main() {
     cout<<"Введите размер массива: ";
     cin>>size;
     cout<<"Последовательно введите элементы массива: ";
-    vector <int> a(size);
+    vector <char> a(size);
 
     for (int i = 0; i < size; i++) {
-        int new_element;
+        char new_element;
         cin>>new_element;
         a[i] = new_element;
     }
@@ -20,22 +20,21 @@ int main() {
         cout<<a[i]<<" ";
     }
     cout << "\nВведите ключ для поиска" << endl;
-    int key;
+    char key;
     cin >> key;
     bool flag = false;
     int number = 0;
     for (int i = 0; i < size && flag == false; i++) {
         if (a[i] == key) {
-
-    flag = true;
-    number = i+1;
+            flag = true;
+            number = i+1;
     }
 }
     if (flag) {
         cout << "Ключ находится по номеру " << number;
     }
     else {
-    cout << "Ключ не найден";
+        cout << "Ключ не найден";
     }
     return 0;
 }
